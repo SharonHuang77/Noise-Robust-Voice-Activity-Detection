@@ -43,8 +43,10 @@ Run the indexing script inside your virtual environment:
 ```Bash
 # Ensure the output directory exists
 mkdir -p data/indexes
-
+```
 # Generate the indexes
+From Linux/Mac:
+```Bash
 python src/01_indexing/make_indexes.py \
   --librispeech_root data/raw/LibriSpeech \
   --musan_root data/raw/musan \
@@ -52,6 +54,14 @@ python src/01_indexing/make_indexes.py \
   --ls_splits train-clean-100 dev-clean test-clean test-other
 ```
 
+From PC:
+```Powershell
+python src/01_indexing/make_indexes.py `
+  --librispeech_root D:/Projects/CS6140/Noise-Robust-Voice-Activity-Detection/data/raw/LibriSpeech `
+  --musan_root D:/Projects/CS6140/Noise-Robust-Voice-Activity-Detection/data/raw/musan `
+  --out_dir data/indexes `
+  --strict_exist
+```
 ### 5. Construct labeled VAD sequences
 
 Run the generation script to create the manifest with labeled VAD sequences:
@@ -66,3 +76,14 @@ From PC:
 .\scripts\02_generation.ps1
 ```
 
+### 6. Add noise to the clean sequences
+Run the noise addition script to create the final training data with added MUSAN noise:
+From Linux/Mac:
+```bash
+./scripts/03_add_noise.sh
+```
+
+From PC:
+```Powershell
+.\scripts\03_add_noise.ps1
+```
