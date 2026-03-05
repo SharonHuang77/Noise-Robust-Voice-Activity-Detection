@@ -8,7 +8,7 @@ What this script does:
 - Produces JSONL index files with (id, split/category, path, duration)
 
 Usage examples:
-python3 src/make_indexes.py \
+python3 src/01_indexing/make_indexes.py \
   --librispeech_root data/raw/LibriSpeech \
   --musan_root data/raw/musan \
   --out_dir data/indexes \

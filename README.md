@@ -38,7 +38,7 @@ Run the indexing script inside your virtual environment:
 mkdir -p data/indexes
 
 # Generate the indexes
-python src/make_indexes.py \
+python src/01_indexing/make_indexes.py \
   --librispeech_root data/raw/LibriSpeech \
   --musan_root data/raw/musan \
   --out_dir data/indexes \
