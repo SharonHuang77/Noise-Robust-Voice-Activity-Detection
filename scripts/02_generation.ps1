@@ -11,9 +11,9 @@ $GEN_SCRIPT = "src\02_generation\generate_sequences.py"
 $OUT_BASE = "data\generated"
 
 # -------- dataset size --------
-$TRAIN_N = 2000
-$DEV_N   = 200
-$TEST_N  = 200
+$TRAIN_N = 3000
+$DEV_N   = 500
+$TEST_N  = 500
 
 # -------- seed + params (your improved Step 2 geometry) --------
 $SEED = 1337
@@ -23,15 +23,15 @@ $COMMON_ARGS = @(
   "--frame_ms", "25.0",
   "--hop_ms", "10.0",
   "--overlap_thr", "0.5",
-  "--n_min", "2",
+  "--n_min", "3",
   "--n_max", "6",
-  "--max_utt_s", "4",
+  "--max_utt_s", "3.5",
   "--gap_min_s", "0.5",
   "--gap_max_s", "2.0",
-  "--lead_prob", "1.0",
-  "--trail_prob", "1.0",
+  "--lead_prob", "0.8",
+  "--trail_prob", "0.8",
   "--leadtrail_min_s", "0.3",
-  "--leadtrail_max_s", "1.0",
+  "--leadtrail_max_s", "2.5",
   "--seed", "$SEED"
 )
 
