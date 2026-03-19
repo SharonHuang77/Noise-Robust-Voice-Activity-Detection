@@ -1,18 +1,18 @@
 # Audio Processing
-torchaudio
-librosa
-soundfile
+torchaudio==2.2.0
+librosa==0.11.0
+soundfile==0.13.1
+audioread==3.0.1
 
 # Core Machine Learning
-torch
-numpy
-scipy
+torch==2.2.0
+numpy==1.26.4
+scipy==1.17.1
 
 # Utilities & Visualization
-matplotlib
-numpy
-tqdm
-python-dotenv
+matplotlib==3.8.3
+tqdm==4.66.2
+python-dotenv==1.0.1
 
-# Optional: For specialized VAD models or features
-webrtcvad  # High-performance lightweight VAD
+# Specialized VAD
+webrtcvad==2.0.10 # High-performance lightweight VAD

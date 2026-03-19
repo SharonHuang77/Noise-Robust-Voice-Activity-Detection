@@ -26,7 +26,7 @@ else
 fi
 
 echo "--- Cleanup ---"
-# Optional: Remove the .tar.gz files to save space
+# Remove the .tar.gz files to save space
 rm *.tar.gz
 
 echo "Data setup complete."
